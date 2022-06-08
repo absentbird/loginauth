@@ -26,6 +26,6 @@ func (s *login_auth) Next(fromServer []byte, more bool) ([]byte, error) {
     return nil, nil
 }
 
-func LoginAuth(username, password string) smtp.Auth {
+func Auth(username, password string) smtp.Auth {
     return &login_auth{username, password}
 }
