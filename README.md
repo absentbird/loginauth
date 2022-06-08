@@ -1,7 +1,7 @@
 # LoginAuth
 Login Authorization option for sending email over SMTP with Go. Particularly useful for Office365 accounts such as Outlook.com or Exchange Online.
 
-If you've been trying to send email over SMTP and keep getting an error like `"Error tls: first record does not look like a TLS handshake"` this package should help.
+If you've been trying to send email over SMTP and keep getting an error like `"Error tls: first record does not look like a TLS handshake"` this package might help.
 
 ## EXAMPLE
 
