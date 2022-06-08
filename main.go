@@ -1,4 +1,4 @@
-package github.com/absentbird/loginauth
+package loginauth
 
 import (
     "errors"
