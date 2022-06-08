@@ -1,9 +1,9 @@
+package github.com/absentbird/loginauth
+
 import (
     "errors"
     "net/smtp"
 )
-
-package github.com/absentbird/loginauth
 
 type login_auth struct {
     username string
