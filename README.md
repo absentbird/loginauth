@@ -4,17 +4,17 @@ Login Authorization option for sending email over SMTP with Go. Particularly use
 ## EXAMPLE
 
 ```go
-receiver := "example2@example.com"
+server   := "smtp.office365.com:587"
 sender   := "example1@example.com"
 password := "hunter1"
 message  := []byte("Hello.")
+receiver := "example2@example.com"
 
 auth := loginauth.Auth(sender, password)
 
-err := smtp.SendMail("smtp.office365.com:587", auth, sender, receiver, message)
+err := smtp.SendMail(server, auth, sender, receiver, message)
 if err != nil {
     log.Fatal(err)
-    return
 }
-log.Println("Email sent successfully!")
+log.Println("Email sent successfully.")
 ```
