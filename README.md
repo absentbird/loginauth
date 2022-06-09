@@ -8,13 +8,15 @@ If you've been trying to send email over SMTP and keep getting an error like `"E
 ```go
 server   := "smtp.office365.com:587"
 sender   := "example1@example.com"
-password := "hunter1"
-message  := "Hello."
-receiver := "example2@example.com"
+password := "hunter2"
+subject  := "Test"
+message  := "Hello world."
+receiver := []string{"example2@example.com"}
 
 auth := loginauth.Auth(sender, password)
 
-err := smtp.SendMail(server, auth, sender, []string{receiver}, []byte(message))
+body := []byte("Subject:"+subject+"\r\n\r\n"+message)
+err := smtp.SendMail(server, auth, sender, receiver, body)
 if err != nil {
     log.Fatal(err)
 }
